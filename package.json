@@ -1,14 +1,14 @@
 {
-  "name": "datocms-plugin-datocms-plugin-editor-help",
-  "homepage": "https://github.com/YOUR-USER/datocms-plugin-datocms-plugin-editor-help",
-  "version": "0.0.1",
-  "description": "Add extra info for editors to a field.",
+  "name": "datocms-plugin-editor-help",
+  "homepage": "https://github.com/voorhoede/datocms-plugin-editor-help",
+  "version": "1.0.0",
+  "description": "Add extra info for editors to a field using Markdown content.",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --port 5000",
-    "dist": "NODE_ENV=production webpack --progress",
+    "build": "NODE_ENV=production webpack --progress",
     "addToProject": "yo datocms-plugin:add-to-project",
-    "prepublishOnly": "rimraf lib dist && mkdir dist && npm run dist",
+    "prepublishOnly": "rimraf lib dist && mkdir dist && npm run build",
     "lint": "eslint \"./src/*.{js,jsx}\"",
     "test": "echo 1"
   },
@@ -35,8 +35,8 @@
     "dist",
     "docs"
   ],
-  "author": "Bas de Vleeschhouwer <bas@voorhoede.nl>",
-  "license": "ISC",
+  "author": "De Voorhoede (https://www.voorhoede.nl/)",
+  "license": "MIT",
   "datoCmsPlugin": {
     "title": "Editor Help",
     "previewImage": "docs/preview.gif",
@@ -44,20 +44,20 @@
     "entryPoint": "dist/index.html",
     "pluginType": "field_addon",
     "fieldTypes": [
-      "json",
-      "text",
       "boolean",
-      "float",
-      "integer",
-      "string",
-      "links",
-      "link",
+      "color",
       "date",
       "date_time",
-      "video",
-      "color",
+      "float",
+      "integer",
+      "json",
+      "lat_lon",
+      "link",
+      "links",
       "seo",
-      "lat_lon"
+      "string",
+      "text",
+      "video"
     ],
     "parameters": {
       "global": [

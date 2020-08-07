@@ -1,10 +1,41 @@
-# Datocms Plugin Editor Help DatoCMS plugin
+# Datocms Plugin: Editor Help
 
-Add extra info for editors on a field.
+This DatoCMS plugin can be added to a field in order to present extra information for editors.
+
+![](https://github.com/voorhoede/datocms-plugin-editor-help/raw/master/docs/result-in-the-content-editor.png)
+
+## Features
+
+The plugin can be used to provide additional information on the following field types:
+
+* `boolean`
+* `color`
+* `date`
+* `date_time`
+* `float`
+* `integer`
+* `json`
+* `lat_lon`
+* `link`
+* `links`
+* `seo`
+* `string`
+* `text`
+* `video`
+
+Content can be provided using Markdown.
 
 ## Configuration
 
-[Describe/screenshot any global/instance parameters this plugin requires]
+First add this plugin via DatoCMS Settings > Plugins > Add.
+
+After installing the plugin, it can be connected to a field using the 'Insert add-on' button.
+
+![](https://raw.githubusercontent.com/voorhoede/datocms-plugin-editor-help/master/docs/adding-the-plugin.png?sanitize=true)
+
+When connected to a field, under the tab 'Presentation', you can add the label of the button and the extra information to be shown in the info panel toggled by the button.
+
+![](https://github.com/voorhoede/datocms-plugin-editor-help/raw/master/docs/model-specific-settings.png)
 
 ## Development
 
@@ -27,17 +58,3 @@ yarn start
 ```
 
 The plugin will be served from [http://localhost:5000/](http://localhost:5000/). Insert this URL as the plugin [Entry point URL](https://www.datocms.com/docs/plugins/creating-a-new-plugin/).
-
-## Publishing
-
-Before publishing this plugin, make sure:
-
-* you've properly described any configuration parameters in this README file;
-* you've properly compiled this project's `package.json` following the [official rules](https://www.datocms.com/docs/plugins/publishing/);
-* you've added a cover image (`cover.png`) and a preview GIF (`preview.gif`) into the `docs` folder.
-
-When everything's ready, just run:
-
-```
-yarn publish
-```
